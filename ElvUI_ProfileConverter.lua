@@ -32,9 +32,10 @@ end
 function ns:OnInitialize()
    ns.status = ""
 
-   local myOptionsTable = {
+   local optionsTable = {
       type = "group",
       name = "Profile Converter",
+      order = 66,
       args = {
         convert = {
           name = "Paste the old profile into the editbox below:",
@@ -48,6 +49,6 @@ function ns:OnInitialize()
     }
 
     ElvUIPlugin:RegisterPlugin("ElvUI_ProfileConverter", function()
-      _G.ElvUI[1].Options.args.profileconverter = myOptionsTable
+      _G.ElvUI[1].Options.args.profileconverter = optionsTable
    end)
 end

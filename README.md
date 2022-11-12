@@ -2,7 +2,7 @@
 
 A small tool that allows converting old profile exports to the new format.
 
-Usage: `/econvert`
+Usage: `Profile Converter` button in ElvUI settings.
 
 ## COPYRIGHT
 

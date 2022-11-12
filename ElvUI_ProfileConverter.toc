@@ -3,7 +3,7 @@
 ## Interface-Wrath: 30400
 ## Title: |cff1784d1ElvUI|r Profile Converter
 ## Notes: A small tool that allows converting old profile exports to the new format.
-## Version: 1.1.0
+## Version: 1.1.1
 ## Author: AcidWeb
 ## RequiredDeps: ElvUI
 
