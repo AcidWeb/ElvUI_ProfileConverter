@@ -15,17 +15,17 @@ function ns:Convert(dataString)
    if not LibBase64:IsBase64(dataString) then
       return "Error: Input doesn't look like a correct profile."
    end
-   
+
    local decodedData = LibBase64:Decode(dataString)
    local decompressedData, decompressedMessage = LibCompress:Decompress(decodedData)
-   
+
    if not decompressedData then
       return format("Error decompressing data: %s.", decompressedMessage)
    end
-   
+
    local compressedData = LibDeflate:CompressDeflate(decompressedData, {level = 5})
    local profileExport = LibDeflate:EncodeForPrint(compressedData)
-   
+
    return "!E1!"..profileExport
 end
 
@@ -47,6 +47,7 @@ function ns:OnInitialize()
       }
     }
 
-   ElvUIPlugin:RegisterPlugin("ElvUI_ProfileConverter")
-   _G.ElvUI[1].Options.args.profileconverter = myOptionsTable
+    ElvUIPlugin:RegisterPlugin("ElvUI_ProfileConverter", function()
+      _G.ElvUI[1].Options.args.profileconverter = myOptionsTable
+   end)
 end
