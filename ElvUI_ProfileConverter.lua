@@ -1,4 +1,3 @@
-local _G = _G
 local _, ns = ...
 
 local LibBase64 = LibStub("LibBase64-1.0-ElvUI")
@@ -9,7 +8,7 @@ local ElvUIPlugin = LibStub("LibElvUIPlugin-1.0")
 ns = LibStub("AceAddon-3.0"):NewAddon("ElvUI Profile Converter")
 
 function ns:Convert(dataString)
-   if strfind(dataString, '!E1!') then
+   if strfind(dataString, "!E1!") then
       return "Error: Input already uses a new format."
    end
    if not LibBase64:IsBase64(dataString) then
@@ -49,6 +48,6 @@ function ns:OnInitialize()
     }
 
     ElvUIPlugin:RegisterPlugin("ElvUI_ProfileConverter", function()
-      _G.ElvUI[1].Options.args.profileconverter = optionsTable
+      ElvUI[1].Options.args.profileconverter = optionsTable
    end)
 end
