@@ -1,7 +1,7 @@
-## Interface: 11503, 40400, 110005
+## Interface: 11505, 40401, 110007
 ## Title: |cff1784d1ElvUI|r Profile Converter
 ## Notes: A small tool that allows converting old profile exports to the new format.
-## Version: 1.1.15
+## Version: 1.1.16
 ## Author: AcidWeb
 ## RequiredDeps: ElvUI
 ## IconTexture: Interface\AddOns\ElvUI_ProfileConverter\RELogo
